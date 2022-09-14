@@ -3,10 +3,22 @@ import { Link } from 'react-router-dom';
 
 const Departamentos = () => {
 
+  const departamentos = [
+    { id: 1, nome: 'Recursos Humanos', sigla: 'RH' },
+    { id: 2, nome: 'Financeiro', sigla: 'FINANC' },
+    { id: 3, nome: 'Contabilidade', sigla: 'CONTAB' }
+  ]
+
   return (
     <>
       <h1>Departamentos</h1>
-      <Link to='/departamentos/10'>Departamento 10</Link>
+      {departamentos.map((depto) => {
+        return <Link 
+                  key={depto.id}
+                  to={`/departamentos/${depto.id}`}>
+                  {depto.nome}
+                </Link>
+      })}
     </>
   );
 }

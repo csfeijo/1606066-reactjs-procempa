@@ -7,6 +7,7 @@ const Menu = () => {
     <nav>
       <Link to='/'>Home</Link>
       <Link to='/departamentos'>Departamentos</Link>
+      <Link className='active' to='/departamentos/new'>Add Departamento</Link>
     </nav>
   )
 }

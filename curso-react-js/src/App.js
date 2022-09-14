@@ -8,6 +8,8 @@ import Departamentos from './pages/Departamentos';
 import DepartamentoDetalhes from './pages/DepartamentoDetalhes';
 import NotFound from './pages/NotFound';
 import Menu from './components/Menu';
+import FormDepartamentos from './pages/FormDepartamentos';
+import './assets/scss/main.scss';
 
 function App() {
  
@@ -19,6 +21,7 @@ function App() {
         <Route path='/departamentos'>
           <Route index element={<Departamentos />} />
           <Route path=':idDepartamento' element={<DepartamentoDetalhes />} />
+          <Route path='new' element={<FormDepartamentos />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
