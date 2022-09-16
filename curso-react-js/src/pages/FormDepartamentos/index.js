@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
+import Mensagem from './styles';
 
 const FormDepartamentos = () => {
 
   const [nome, setNome] = useState('');
   const [sigla, setSigla] = useState('');
   const [msg, setMsg] = useState('');
+  const [type, setType] = useState('erro');
 
   // validacao do formulario
   const validaForm = () => {
     if (nome === '') {
       setMsg('Preencha o nome');
+      setType('erro');
       return false;
     }
 
     if (sigla === '') {
       setMsg('Preencha a sigla');
+      setType('erro');
       return false;
     }
     
     // sucesso!
     setMsg('Sucesso');
+    setType('sucesso');
     setNome('');
     setSigla('');
   }
@@ -53,7 +58,7 @@ const FormDepartamentos = () => {
         titulo='Enviar'
         onClick={validaForm}
       />
-      <p>{msg}</p>
+      <Mensagem type={type}>{msg}</Mensagem>
     </>
   )
 }

@@ -21,6 +21,20 @@
 - Properties
 - Hooks / States
 
+### Aula 03
+- Correção de Exercício
+- useEffect
+- Rotas
+
+### Aula 04
+- Correção de Exercício sobre Rotas
+- Estilos CSS no ReactJS
+- CSS
+- SASS Overview
+
+### Aula 05
+- Styled Components
+- Theme Provider com Styled Components
 
 ## Links Interessantes
 * [Estrutura de pastas para ReactJS/React Native](https://www.youtube.com/watch?v=X2RKRKdqqwM-)
@@ -29,3 +43,10 @@
 * [Module Federation](https://webpack.js.org/concepts/module-federation/)
 * [How We Build Micro Frontends With Lattice](https://netflixtechblog.com/how-we-build-micro-frontends-with-lattice-22b8635f77ea)
 * [4 Micro-Frontend Anti-Patterns](https://javascript.plainenglish.io/four-micro-frontend-anti-patterns-58aaa9fe19d5)
+* [Tagged Template Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)
+* [React Bootstrap Components](https://react-bootstrap.github.io/)
+* [Storybook - Design System](https://storybook.js.org/)
+* [Chakra UI using Storybook](https://chakra-ui.netlify.app/?path=/story/accordion--default)
+* [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Entendendo Básico de Diplay Flex - Vídeo](https://www.youtube.com/watch?v=fVNyfDUuock)
+

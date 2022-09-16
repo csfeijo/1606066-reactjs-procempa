@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { LinkNav, Nav } from './styles';
 
 const Menu = () => {
 
   return (
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/departamentos'>Departamentos</Link>
-      <Link className='active' to='/departamentos/new'>Add Departamento</Link>
-    </nav>
+    <Nav>
+      <h1>Curso de ReactJS</h1>
+      <LinkNav to='/'>Home</LinkNav>
+      <LinkNav to='/departamentos'>Departamentos</LinkNav>
+      <LinkNav to='/departamentos/new'>Add Departamento</LinkNav>
+    </Nav>
   )
 }
 

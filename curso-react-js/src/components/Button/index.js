@@ -1,8 +1,14 @@
 import React from 'react';
+import BaseButton from './styles';
 
 const Button = ({ onClick, titulo }) => {
   return (
-    <button type="button" onClick={onClick}>{titulo}</button>
+    <BaseButton
+     type="button"
+     onClick={onClick}
+    >
+      {titulo}
+    </BaseButton>
   )
 }
 
