@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Card from '../../components/Card';
+import { Container, List } from './styles';
+import Button from '../../components/Button';
 
 const Departamentos = () => {
 
@@ -10,16 +12,37 @@ const Departamentos = () => {
   ]
 
   return (
-    <>
+    <Container>
       <h1>Departamentos</h1>
+
+      <List>
       {departamentos.map((depto) => {
-        return <Link 
-                  key={depto.id}
-                  to={`/departamentos/${depto.id}`}>
-                  {depto.nome}
-                </Link>
+        return (
+          <Card key={depto.id} to={`/departamentos/${depto.id}`}>
+            <h3>{depto.nome}</h3>
+
+            <Button
+              uiType='warning'
+              titulo='Editar'
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            />
+
+            <Button
+              uiType='danger'
+              titulo='Excluir'
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            />
+
+          </Card>
+        )
       })}
-    </>
+      </List>
+
+    </Container>
   );
 }
 

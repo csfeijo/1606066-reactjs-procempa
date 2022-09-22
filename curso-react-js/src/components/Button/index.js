@@ -1,11 +1,12 @@
 import React from 'react';
 import BaseButton from './styles';
 
-const Button = ({ onClick, titulo }) => {
+const Button = ({ onClick, titulo, uiType }) => {
   return (
     <BaseButton
-     type="button"
-     onClick={onClick}
+      uiType={uiType}
+      type="button"
+      onClick={onClick}
     >
       {titulo}
     </BaseButton>

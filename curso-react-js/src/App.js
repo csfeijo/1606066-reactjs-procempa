@@ -16,7 +16,7 @@ import './assets/scss/main.scss';
 function App() {
  
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={light}>
       <BrowserRouter>
         <Menu />
         <Routes>
