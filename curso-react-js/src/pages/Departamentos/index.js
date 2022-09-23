@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card';
 import { Container, List } from './styles';
 import Button from '../../components/Button';
+import getDepartamentos from '../../services/departamentos';
 
 const Departamentos = () => {
 
-  const departamentos = [
-    { id: 1, nome: 'Recursos Humanos', sigla: 'RH' },
-    { id: 2, nome: 'Financeiro', sigla: 'FINANC' },
-    { id: 3, nome: 'Contabilidade', sigla: 'CONTAB' }
-  ]
+  const [departamentos, setDepartamentos] = useState([]);
 
+  const loadDepartamentos = async () => {
+    setDepartamentos(await getDepartamentos());
+  }
+
+  useEffect(() => {
+    if(departamentos.length === 0) {
+      loadDepartamentos();
+    }
+  }, [departamentos])
+  
   return (
     <Container>
       <h1>Departamentos</h1>
@@ -18,7 +25,7 @@ const Departamentos = () => {
       <List>
       {departamentos.map((depto) => {
         return (
-          <Card key={depto.id} to={`/departamentos/${depto.id}`}>
+          <Card key={depto.id} to={`/departamentos/${depto.id_departamentos}`}>
             <h3>{depto.nome}</h3>
 
             <Button
