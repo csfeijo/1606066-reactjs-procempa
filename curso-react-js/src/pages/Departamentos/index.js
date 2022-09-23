@@ -25,7 +25,7 @@ const Departamentos = () => {
       <List>
       {departamentos.map((depto) => {
         return (
-          <Card key={depto.id} to={`/departamentos/${depto.id_departamentos}`}>
+          <Card key={depto.id_departamento} to={`/departamentos/${depto.id_departamento}`}>
             <h3>{depto.nome}</h3>
 
             <Button

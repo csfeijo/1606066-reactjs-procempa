@@ -11,11 +11,24 @@ const CardLink = styled(Link)`
   border-radius: 4px;
 
   align-items: center;
-  justify-content: center;
-
-  flex-direction: column;
-
+  /* justify-content: center; */
+  /* flex-direction: column; */
   margin: 10px;
+
+  /* FAZ COM QUE OS BOTÕES FIQUEM NO CENTRO E ABAIXO DO TITULO */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  h3, button {
+    display: inline-block;
+  }
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+  button {
+    flex: 0;
+  }
 `;
 
 export default CardLink;

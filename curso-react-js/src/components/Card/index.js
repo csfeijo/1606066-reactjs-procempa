@@ -1,11 +1,10 @@
 import React from 'react';
 import CardLink from './styles';
 
-const Card = ({ key, to, children }) => {
+const Card = ({ to, children }) => {
 
   return (
       <CardLink
-        key={key}
         to={to}>
         {children}
       </CardLink>
