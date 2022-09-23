@@ -47,7 +47,10 @@
 * [React Bootstrap Components](https://react-bootstrap.github.io/)
 * [Storybook - Design System](https://storybook.js.org/)
 * [Chakra UI using Storybook](https://chakra-ui.netlify.app/?path=/story/accordion--default)
-* [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Entendendo Básico de Diplay Flex - Vídeo](https://www.youtube.com/watch?v=fVNyfDUuock)
 
 ## Material CSS
+* [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Entendendo Básico de Diplay Flex - Vídeo](https://www.youtube.com/watch?v=fVNyfDUuock)
+* [Guia Completo FlexBox - Origamid](https://origamid.com/projetos/flexbox-guia-completo/)
+* [Game - FlexBox Frog](https://flexboxfroggy.com/#pt-br)
+* [Game - FlexBox Adventure](https://codingfantasy.com/games/flexboxadventure)
