@@ -54,3 +54,6 @@
 * [Guia Completo FlexBox - Origamid](https://origamid.com/projetos/flexbox-guia-completo/)
 * [Game - FlexBox Frog](https://flexboxfroggy.com/#pt-br)
 * [Game - FlexBox Adventure](https://codingfantasy.com/games/flexboxadventure)
+
+## FREE API´s 
+* [Mock API](https://mockapi.io/)

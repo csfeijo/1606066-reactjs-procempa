@@ -4,9 +4,20 @@ const headers = {
   'Authorization': 'Bearer PROCEMPA'
 }
 
-const getDepartamentos = async () => {
+export const getDepartamentos = async () => {
   const resp = await api.get('/departamentos/', { headers });
   return resp.data;
 }
 
-export default getDepartamentos;
+export const insereDepartamentos = async (data) => {
+  const { nome, sigla } = data;
+  const body = new FormData();
+  body.append('nome', nome);
+  body.append('sigla', sigla);
+
+  const resp = await api.post('/departamentos/', data, { headers });
+
+  return resp.data;
+}
+
+

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
-import Mensagem from './styles';
+import { Container, Mensagem } from './styles';
+import { insereDepartamentos } from '../../services/departamentos';
 
 const FormDepartamentos = () => {
 
@@ -24,14 +25,19 @@ const FormDepartamentos = () => {
     }
     
     // sucesso!
+    insereDepartamentos({
+      nome,
+      sigla
+    });
     setMsg('Sucesso');
     setType('sucesso');
-    setNome('');
-    setSigla('');
+    //setNome('');
+    //setSigla('');
   }
 
   return (
-    <>
+    <Container>
+      <h1>Cadastro de Departamento:</h1>
       <input 
         type='text'
         name='nome'
@@ -59,7 +65,7 @@ const FormDepartamentos = () => {
         onClick={validaForm}
       />
       <Mensagem type={type}>{msg}</Mensagem>
-    </>
+    </Container>
   )
 }
 

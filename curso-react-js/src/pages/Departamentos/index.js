@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card';
 import { Container, List } from './styles';
 import Button from '../../components/Button';
-import getDepartamentos from '../../services/departamentos';
+import { getDepartamentos } from '../../services/departamentos';
 
 const Departamentos = () => {
 
