@@ -57,3 +57,4 @@
 
 ## FREE API´s 
 * [Mock API](https://mockapi.io/)
+* [PATCH VS PUT](https://medium.com/@gabrielrufino.js/put-vs-patch-pare-de-agora-escolher-errado-533b8c6058d9)

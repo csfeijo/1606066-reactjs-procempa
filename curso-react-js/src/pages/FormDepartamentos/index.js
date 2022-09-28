@@ -25,10 +25,21 @@ const FormDepartamentos = () => {
     }
     
     // sucesso!
-    insereDepartamentos({
-      nome,
-      sigla
-    });
+    const insere = async () => {
+      try{
+        const resp = await insereDepartamentos({
+          nome,
+          sigla
+        })
+      } catch(e) {
+        console.log('---', e);
+      }
+    }
+
+    console.log(insere());
+
+
+
     setMsg('Sucesso');
     setType('sucesso');
     //setNome('');

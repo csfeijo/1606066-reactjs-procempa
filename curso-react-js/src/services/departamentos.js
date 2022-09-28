@@ -15,9 +15,14 @@ export const insereDepartamentos = async (data) => {
   body.append('nome', nome);
   body.append('sigla', sigla);
 
-  const resp = await api.post('/departamentos/', data, { headers });
+  let error = {};
+  const resp = await api
+                      .post('/departamentos/', body, { headers })
+                      .catch(e => {
+                        error = e.response;
+                      });
 
-  return resp.data;
+  return (resp && resp.data) || error;
 }
 
 
