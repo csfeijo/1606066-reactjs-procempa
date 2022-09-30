@@ -23,27 +23,24 @@ const FormDepartamentos = () => {
       setType('erro');
       return false;
     }
-    
-    // sucesso!
-    const insere = async () => {
-      try{
-        const resp = await insereDepartamentos({
-          nome,
-          sigla
-        })
-      } catch(e) {
-        console.log('---', e);
+
+    (async () => {
+      const resp = await insereDepartamentos({
+        nome,
+        sigla
+      })
+
+      if (resp.status && resp.status === 500) {
+        setMsg('Erro no servidor!');
+        setType('erro');
+      } else {
+        // implementação dos casos de sucesso
+        setMsg('Departamento cadastrado');
+        setType('sucesso');
+        setNome('');
+        setSigla('');
       }
-    }
-
-    console.log(insere());
-
-
-
-    setMsg('Sucesso');
-    setType('sucesso');
-    //setNome('');
-    //setSigla('');
+    })()    
   }
 
   return (
