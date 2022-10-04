@@ -26,7 +26,15 @@ const getUiType = (uiType) => {
 const BaseButton = styled.button`
   font-weight: bold;
   padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  img {
+    width: 16px;
+    margin-right: 6px;
+  }
+  
   ${props => getUiType(props.uiType)}
 `;
 

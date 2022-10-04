@@ -31,7 +31,7 @@ const Departamentos = () => {
     <Container>
       <h1>Departamentos</h1>
       {loading && 
-        <Loader fullScreen={false} />
+        <Loader fullScreen={true} />
       }
       <List>
       {departamentos.map((depto) => {

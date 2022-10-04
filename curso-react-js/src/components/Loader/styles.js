@@ -1,9 +1,6 @@
 import styled, { css } from 'styled-components';
 
 const Container = styled.div`
-  width: 100px;
-  height: 100px;
-
   ${props => {
     if (props.fullScreen) {
       return (
@@ -17,7 +14,6 @@ const Container = styled.div`
           display: flex;
           align-items: center;
           justify-content: center;
-        
         `
       )
     }

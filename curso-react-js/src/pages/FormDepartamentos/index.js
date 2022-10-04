@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../../components/Button';
 import { Container, Mensagem } from './styles';
 import { insereDepartamentos } from '../../services/departamentos';
+import Loader from '../../components/Loader';
 
 const FormDepartamentos = () => {
 
@@ -9,6 +10,7 @@ const FormDepartamentos = () => {
   const [sigla, setSigla] = useState('');
   const [msg, setMsg] = useState('');
   const [type, setType] = useState('erro');
+  const [loading, setLoading] = useState(false);
 
   // validacao do formulario
   const validaForm = () => {
@@ -25,6 +27,7 @@ const FormDepartamentos = () => {
     }
 
     (async () => {
+      setLoading(true);
       const resp = await insereDepartamentos({
         nome,
         sigla
@@ -36,6 +39,7 @@ const FormDepartamentos = () => {
       } else {
         // implementação dos casos de sucesso
         setMsg('Departamento cadastrado');
+        setLoading(false);
         setType('sucesso');
         setNome('');
         setSigla('');
@@ -68,10 +72,21 @@ const FormDepartamentos = () => {
         }}        
       />
       <br/>
+
       <Button 
-        titulo='Enviar'
         onClick={validaForm}
-      />
+      >
+        {loading &&
+          <>
+            <Loader/> Carregando
+          </>
+        }
+
+        {!loading &&
+          <>Enviar</>
+        }
+      </Button>
+
       <Mensagem type={type}>{msg}</Mensagem>
     </Container>
   )
