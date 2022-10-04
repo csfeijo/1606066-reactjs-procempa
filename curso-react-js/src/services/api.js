@@ -3,7 +3,7 @@ import configureMock from './configureMock';
 
 const baseURL = 'https://professorfeijo.com.br/tt/api-php';
 
-const mockRequests = false;
+const mockRequests = true;
 
 const api = axios.create({
   baseURL

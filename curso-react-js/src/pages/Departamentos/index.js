@@ -3,13 +3,22 @@ import Card from '../../components/Card';
 import { Container, List } from './styles';
 import Button from '../../components/Button';
 import { getDepartamentos } from '../../services/departamentos';
+import Loader from '../../components/Loader';
 
 const Departamentos = () => {
 
   const [departamentos, setDepartamentos] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const loadDepartamentos = async () => {
-    setDepartamentos(await getDepartamentos());
+    setLoading(true);
+    try {
+      const resp = await getDepartamentos();
+      setDepartamentos(resp);
+      setLoading(false);
+    } catch (e) {
+      console.error('Erro!');
+    }
   }
 
   useEffect(() => {
@@ -21,9 +30,12 @@ const Departamentos = () => {
   return (
     <Container>
       <h1>Departamentos</h1>
-
+      {loading && 
+        <Loader fullScreen={false} />
+      }
       <List>
       {departamentos.map((depto) => {
+
         return (
           <Card key={depto.id_departamento} to={`/departamentos/${depto.id_departamento}`}>
             <h3>{depto.nome}</h3>
@@ -48,7 +60,6 @@ const Departamentos = () => {
         )
       })}
       </List>
-
     </Container>
   );
 }
