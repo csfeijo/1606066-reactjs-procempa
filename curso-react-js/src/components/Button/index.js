@@ -1,5 +1,6 @@
-import React, { Children } from 'react';
+import React from 'react';
 import BaseButton from './styles';
+import propTypes from './propTypes';
 
 const Button = ({ onClick, children, uiType }) => {
   return (
@@ -12,5 +13,7 @@ const Button = ({ onClick, children, uiType }) => {
     </BaseButton>
   )
 }
+
+Button.propTypes = propTypes;
 
 export default Button;

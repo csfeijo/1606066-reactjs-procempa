@@ -42,19 +42,21 @@ const Departamentos = () => {
 
             <Button
               uiType='warning'
-              titulo='Editar'
               onClick={(e) => {
                 e.preventDefault();
               }}
-            />
+            >
+              Editar
+            </Button>
 
             <Button
               uiType='danger'
-              titulo='Excluir'
               onClick={(e) => {
                 e.preventDefault();
               }}
-            />
+            >
+              Excluir
+            </Button>
 
           </Card>
         )
