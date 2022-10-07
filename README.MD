@@ -90,3 +90,6 @@
 * [Mirage](https://miragejs.com/)
 * [Axios Mock Adapter](https://www.npmjs.com/package/axios-mock-adapter)
 
+## ESLINT
+* [ESLint Docs](https://eslint.org/docs/latest/user-guide/configuring/rules)
+
