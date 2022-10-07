@@ -1,19 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { counter, incrementCounter } from '../../store/counter/counterSlice';
+import { counterValue, incrementCounter } from '../../store/counter/counterSlice';
 import Container from './styles';
 import Button from '../../components/Button';
 
 const Home = () => {
 
-  const count = useSelector(counter);
+  const count = useSelector(counterValue);
   const dispatch = useDispatch()
 
   return (
     <Container>
       <h1>Home do Curso</h1>
       <hr/>
-      Contador: {count.value}
+      Contador: {count}
 
       <Button
         onClick={() =>{

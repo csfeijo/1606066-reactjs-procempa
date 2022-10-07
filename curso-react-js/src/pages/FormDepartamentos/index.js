@@ -3,6 +3,8 @@ import Button from '../../components/Button';
 import { Container, Mensagem } from './styles';
 import { insereDepartamentos } from '../../services/departamentos';
 import Loader from '../../components/Loader';
+import { useDispatch } from 'react-redux';
+import { incrementCounter } from '../../store/counter/counterSlice';
 
 const FormDepartamentos = () => {
 
@@ -11,6 +13,8 @@ const FormDepartamentos = () => {
   const [msg, setMsg] = useState('');
   const [type, setType] = useState('erro');
   const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
 
   // validacao do formulario
   const validaForm = () => {
@@ -37,6 +41,8 @@ const FormDepartamentos = () => {
         setMsg('Erro no servidor!');
         setType('erro');
       } else {
+        // incrementa o count
+        dispatch(incrementCounter());
         // implementação dos casos de sucesso
         setMsg('Departamento cadastrado');
         setLoading(false);

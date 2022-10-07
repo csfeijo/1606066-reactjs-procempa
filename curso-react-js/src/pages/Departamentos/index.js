@@ -4,11 +4,14 @@ import { Container, List } from './styles';
 import Button from '../../components/Button';
 import { getDepartamentos } from '../../services/departamentos';
 import Loader from '../../components/Loader';
+import { resetCounter } from '../../store/counter/counterSlice';
+import { useDispatch } from 'react-redux';
 
 const Departamentos = () => {
 
   const [departamentos, setDepartamentos] = useState([]);
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const loadDepartamentos = async () => {
     setLoading(true);
@@ -16,6 +19,7 @@ const Departamentos = () => {
       const resp = await getDepartamentos();
       setDepartamentos(resp);
       setLoading(false);
+      dispatch(resetCounter());
     } catch (e) {
       console.error('Erro!');
     }
